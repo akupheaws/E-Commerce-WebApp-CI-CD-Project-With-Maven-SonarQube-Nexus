@@ -2,13 +2,11 @@
   <servers>
     <server>
       <id></id>
-      <url>http://172.31.30.172:8081/repository/maven-snapshots/</url>
       <username>admin</username>
       <password>admin</password>
     </server>
     <server>
       <id>nexus-snapshots</id>
-      <url>http://172.31.30.172:8081/repository/maven-snapshots/</url>
       <username>admin</username>
       <password>admin</password>
     </server>

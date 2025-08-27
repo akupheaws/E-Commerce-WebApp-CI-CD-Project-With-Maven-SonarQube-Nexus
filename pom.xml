@@ -11,11 +11,13 @@
   <name>E-Commerce WebApp</name>
   <description>Simple JSP/Servlet E-commerce demo packaged as WAR for Tomcat</description>
 
+  <!-- Centralize the Nexus base URL: change here if you want to use the private IP -->
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <failOnMissingWebXml>false</failOnMissingWebXml>
+    <nexus.baseUrl>http://34.229.158.233:8081</nexus.baseUrl>
   </properties>
 
   <dependencies>
@@ -55,23 +57,29 @@
         </configuration>
       </plugin>
 
+      <!-- Optional guard: pin the releases URL so a stray altDeploymentRepository can't force snapshots -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>3.1.1</version>
+        <configuration>
+          <altDeploymentRepository>
+            nexus-releases::default::${nexus.baseUrl}/repository/maven-releases/
+          </altDeploymentRepository>
+        </configuration>
       </plugin>
     </plugins>
   </build>
 
-  <!-- ✅ Corrected Nexus repo info -->
+  <!-- Correct: releases -> maven-releases, snapshots -> maven-snapshots -->
   <distributionManagement>
     <repository>
       <id>nexus-releases</id>
-      <url>http://172.31.30.172:8081/repository/maven-releases/</url>
+      <url>${nexus.baseUrl}/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://172.31.30.172:8081/repository/maven-snapshots/</url>
+      <url>${nexus.baseUrl}/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 

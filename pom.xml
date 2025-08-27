@@ -12,7 +12,6 @@
   <description>Simple JSP/Servlet E-commerce demo packaged as WAR for Tomcat</description>
 
   <properties>
-    <!-- Change this if your JDK is 11+ -->
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,7 +35,6 @@
   <build>
     <finalName>webapp</finalName>
     <plugins>
-      <!-- Compiler plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -47,7 +45,6 @@
         </configuration>
       </plugin>
 
-      <!-- WAR plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
@@ -58,7 +55,6 @@
         </configuration>
       </plugin>
 
-      <!-- Deploy plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
@@ -67,11 +63,11 @@
     </plugins>
   </build>
 
-  <!-- Nexus/Artifactory repo info -->
+  <!-- ✅ Corrected Nexus repo info -->
   <distributionManagement>
     <repository>
       <id>nexus-releases</id>
-      <url>http://172.31.30.172:8081/repository/maven-snapshots/</url>
+      <url>http://172.31.30.172:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus-snapshots</id>

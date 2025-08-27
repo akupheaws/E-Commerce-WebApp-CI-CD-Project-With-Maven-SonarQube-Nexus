@@ -19,7 +19,7 @@ Build with `mvn clean package` and deploy `target/webapp.war` to Tomcat 9/8.5.
     - Click on `Create` to Create a Repository
      - Repository Name: maven-sonarqube-nexus-project
      - Click on `Create`
-     - Download the Project Zip from https://github.com/awanmbandi/realworld-cicd-pipeline-project/tree/maven-sonarqube-nexus
+     - Download the Project Zip from https://github.com/akupheaws/realworld-cicd-pipeline-project/tree/maven-sonarqube-nexus
      - Unzip and Push the code to the Repository you just provisioned
 
 2) SonarQube
@@ -27,7 +27,7 @@ Build with `mvn clean package` and deploy `target/webapp.war` to Tomcat 9/8.5.
     - Instance type: t2.medium
     - Security Group (Open): 9000 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/sonarqube-install.sh
+    - User data (Copy the following user data): https://github.com/akupheaws/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/sonarqube-install.sh
     - Launch Instance
 
 3) Maven
@@ -35,7 +35,7 @@ Build with `mvn clean package` and deploy `target/webapp.war` to Tomcat 9/8.5.
     - Instance type: t2.micro
     - Security Group (Open): 22 to 0.0.0.0/0 or Your-IP
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/maven-install.md
+    - User data (Copy the following user data): https://github.com/akupheaws/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/maven-install.md
     - Launch Instance
 
 4) Nexus
@@ -43,7 +43,7 @@ Build with `mvn clean package` and deploy `target/webapp.war` to Tomcat 9/8.5.
     - Instance type: t2.medium
     - Security Group (Open): 8081 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/nexus-install.sh
+    - User data (Copy the following user data): https://github.com/akupheaws/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/nexus-install.sh
     - Launch Instance
 
 5) Nexus
@@ -51,7 +51,7 @@ Build with `mvn clean package` and deploy `target/webapp.war` to Tomcat 9/8.5.
     - Instance type: t2.medium
     - Security Group (Open): 8081 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/nexus-install-ubuntu24.04.sh
+    - User data (Copy the following user data): https://github.com/akupheaws/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/nexus-install-ubuntu24.04.sh
     - Launch Instance
 
 ## Configure Nexus Repository
@@ -83,3 +83,4 @@ Publishing artifact to Nexus snapshot and release repo using maven.
 
 ## Maven Lifecycle Phases
 - https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#a-build-lifecycle-is-made-up-of-phases
+

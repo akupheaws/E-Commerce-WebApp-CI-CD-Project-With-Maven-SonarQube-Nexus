@@ -35,7 +35,7 @@ Build with `mvn clean package` and deploy `target/webapp.war` to Tomcat 9/8.5.
     - Instance type: t2.micro
     - Security Group (Open): 22 to 0.0.0.0/0 or Your-IP
     - Key pair: Select or create a new keypair
-    - User data (Copy the following user data): https://github.com/akupheaws/realworld-cicd-pipeline-project/blob/maven-sonarqube-nexus-jenkins-install/maven-install.md
+
     - Launch Instance
 
 4) Nexus

@@ -75,7 +75,7 @@
     </repository>
     <snapshotRepository>
       <id>nexus-snapshots</id>
-     <url>http://172.31.30.172:8081/repository/maven-snapshots/</url>
+      <url>http://NEXUS_ARTIFACTORY_IP_ADDRESS:NEXUS_PORT_NUMBER/repository/NEXUS_SNAPSHOT_REPOSITORY/</url>
     </snapshotRepository>
   </distributionManagement>
 

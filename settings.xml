@@ -1,14 +1,16 @@
 <settings>
   <servers>
     <server>
-      <id>nexus-releases</id>
-      <username>USER_NAME</username>
-      <password>USER_PASSWORD</password>
+      <id></id>
+      <url>http://172.31.30.172:8081/repository/maven-snapshots/</url>
+      <username>admin</username>
+      <password>admin</password>
     </server>
     <server>
       <id>nexus-snapshots</id>
-      <username>USER_NAME</username>
-      <password>USER_PASSWORD</password>
+      <url>http://172.31.30.172:8081/repository/maven-snapshots/</url>
+      <username>admin</username>
+      <password>admin</password>
     </server>
   </servers>
 </settings>
